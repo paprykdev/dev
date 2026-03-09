@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+if [[ "$(pwd)" == $HOME/personal ]]; then
+    clear
+    return
+fi
+tmux new-window -dn ugh
+tmux new-window -dn git
+tmux new-window -dn ai
+vim .
+clear
