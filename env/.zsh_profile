@@ -30,8 +30,12 @@ addToPathFront () {
     fi
 }
 
+export PNPM_HOME="$HOME/.local/share/pnpm"
 
 addToPathFront $HOME/.local/scripts
+addToPathFront $HOME/.turso
+addToPathFront $PNPM_HOME
 
 source ~/.aliases
 source /usr/share/nvm/init-nvm.sh
+setxkbmap pl
