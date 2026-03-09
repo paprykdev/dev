@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+
+sudo pacman -S --needed base-devel
+git clone https://aur.archlinux.org/paru.git ~/paru
+pushd ~/paru
+makepkg -si
+popd
+
+paru -S just --noconfirm
+paru -S --noconfirm --needed gimp tldr go fzf btop bc stylua pnpm bun
+paru -S --noconfirm cursor-bin cursor-cli
+paru -S --noconfirm nodejs npm
+go install github.com/air-verse/air@latest
+paru -S love --noconfirm --needed
+paru -S ttf-font-awesome waybar ttf-jetbrains-mono-nerd ttf-nerd-fonts-symbols --noconfirm
+paru -S ghostty --noconfirm
+
+paru -S ffmpeg aalib ascii-image-converter-bin --noconfirm
+curl -sSfL https://get.tur.so/install.sh | bash
+
+paru -S cloudflared --noconfirm
+paru -S dosfstools --noconfirm
+paru -S arp-scan avahi nss-mdns --noconfirm
