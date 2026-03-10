@@ -10,6 +10,7 @@ done
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 export GIT_EDITOR=$VIM
+export EDITOR=$VIM
 
 bindkey -s ^f "tmux-sessionizer\n"
 bindkey -s '\eh' "tmux-sessionizer -s 0\n"
@@ -40,3 +41,6 @@ addToPathFront $HOME/.local/bin
 source ~/.aliases
 source /usr/share/nvm/init-nvm.sh
 setxkbmap pl
+
+export QT_AUTO_SCREEN_SCALE_FACTOR=1
+export QT_FONT_DPI=109
