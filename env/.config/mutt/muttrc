@@ -53,3 +53,4 @@ folder-hook imaps://imap.mail.ovh.net/   "source ~/.config/mutt/accounts/ptrx"
 
 macro index <F1> '<sync-mailbox><enter-command>source ~/.config/mutt/accounts/ptrx<enter><change-folder>!<enter>' "Konto ptrx.pl"
 macro index <F2> '<sync-mailbox><enter-command>source ~/.config/mutt/accounts/wmi<enter><change-folder>!<enter>'  "Konto wmi"
+bind index,pager , sidebar-toggle-visible
