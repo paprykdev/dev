@@ -1,0 +1,55 @@
+# === Wspólne ustawienia ===
+set editor    = vim
+set signature = "~/.config/mutt/signature"
+set beep_new  = yes
+set move      = no
+set timeout   = 20
+set sort      = threads
+set sort_aux  = last-date-received
+set read_inc  = 500
+set ssl_use_sslv3 = no
+
+set alias_file = ~/.config/mutt/aliases
+source $alias_file
+
+# === Statystyki folderów ===
+set mail_check_stats          = yes
+set mail_check_stats_interval = 60
+
+# === Sidebar ===
+set sidebar_visible = yes
+set sidebar_width   = 15
+set sidebar_format  = "%B %?N?(%N)?%* %S"
+
+bind index,pager \CP sidebar-prev
+bind index,pager \CN sidebar-next
+bind index,pager \CO sidebar-open
+
+# === Format indeksu ===
+set index_format = "%4C %Z %{%b %d} %-20.20F %s"
+
+# === Kolory ===
+color normal      white         default
+color index       red           default  "~N"
+color index       yellow        default  "~F"
+color index       brightwhite   default  "~T"
+color sidebar_new red           default
+color status      white         black
+color indicator   black         white
+color header      green         default  "^(From|Subject):"
+color quoted      blue          default
+
+# === Mailcap ===
+set mailcap_path = ~/.config/mutt/mailcap
+auto_view text/html message/feedback-report
+alternative_order text/plain text/enriched text/html
+
+# === Domyślne konto ===
+source ~/.config/mutt/accounts/ptrx
+
+# === Przełączanie kont ===
+folder-hook /var/mail/patilk             "source ~/.config/mutt/accounts/wmi"
+folder-hook imaps://imap.mail.ovh.net/   "source ~/.config/mutt/accounts/ptrx"
+
+macro index <F1> '<sync-mailbox><enter-command>source ~/.config/mutt/accounts/ptrx<enter><change-folder>!<enter>' "Konto ptrx.pl"
+macro index <F2> '<sync-mailbox><enter-command>source ~/.config/mutt/accounts/wmi<enter><change-folder>!<enter>'  "Konto wmi"

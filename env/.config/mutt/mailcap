@@ -1,0 +1,1 @@
+text/html; lynx -assume_charset=%{charset} -width=120 -dump -force_html %s; needsterminal; copiousoutput;

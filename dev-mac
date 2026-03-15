@@ -77,6 +77,7 @@ update_files $DEV_ENV/env/.local $HOME/.local
 copy_dir $DEV_ENV/env/.config/nvim $XDG_CONFIG_HOME/nvim
 copy_dir $DEV_ENV/env/.config/tmux $XDG_CONFIG_HOME/tmux
 copy_dir $DEV_ENV/env/.config/ghostty $XDG_CONFIG_HOME/ghostty
+copy_dir $DEV_ENV/env/.config/mutt $XDG_CONFIG_HOME/mutt
 copy $DEV_ENV/tmux-sessionizer/tmux-sessionizer $HOME/.local/scripts/tmux-sessionizer
 # copy $DEV_ENV/env/.zsh_profile $HOME/.zsh_profile
 # copy $DEV_ENV/env/.zshrc $HOME/.zshrc

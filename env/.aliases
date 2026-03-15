@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
 alias vim='nvim'
 alias reload='source ~/.zshrc'
+alias mutt="LANG=C.UTF-8 mutt"

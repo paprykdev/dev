@@ -1,0 +1,27 @@
+alternates "(patrykdev@ptrx\.pl)"
+set from      = "Patryk Ilkiw <patrykdev@ptrx.pl>"
+
+set folder    = "imaps://imap.mail.ovh.net:993/"
+set spoolfile = "+INBOX"
+set mbox_type = Maildir
+
+set imap_user = "patrykdev@ptrx.pl"
+set imap_pass = "!ZoA8dsZrK"
+
+set smtp_url  = "smtps://patrykdev@ptrx.pl:!ZoA8dsZrK@smtp.mail.ovh.net:465"
+
+set ssl_force_tls = yes
+set ssl_starttls  = yes
+
+set record    = "+Sent"
+set postponed = "+Drafts"
+mailboxes "+INBOX" \
+          "+Sent" \
+          "+Drafts" \
+          "+Trash" \
+          "+Junk" \
+          "+Notes" \
+          "+Client's Hosting"
+
+set header_cache     = ~/.config/mutt/cache/ptrx/headers
+set message_cachedir = ~/.config/mutt/cache/ptrx/bodies

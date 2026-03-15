@@ -1,0 +1,19 @@
+alternates "(patilk@wmi\.amu\.edu\.pl)"
+set from      = "Patryk Ilkiw <patilk@wmi.amu.edu.pl>"
+
+set folder    = "/var/mail/patilk"
+set spoolfile = "/var/mail/patilk"
+set mbox_type = Maildir
+
+set smtp_url            = "smtp://smtp.wmi.amu.edu.pl"
+set smtp_authenticators = "login"
+
+set ssl_force_tls = no
+set ssl_starttls  = no
+
+set record    = "+.Sent"
+set postponed = "=drafts"
+mailboxes     = =. =.Drafts =.Junk =.Sent =.Trash =.Spam
+
+set header_cache     = ~/.config/mutt/cache/wmi/headers
+set message_cachedir = ~/.config/mutt/cache/wmi/bodies
