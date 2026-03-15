@@ -1,5 +1,5 @@
 # === Wspólne ustawienia ===
-set editor    = vim
+set editor    = nvim
 set signature = "~/.config/mutt/signature"
 set beep_new  = yes
 set move      = no
